@@ -6,6 +6,8 @@ quick bash tools
 #!/bin/bash
   
 while read host; do
-        echo "scanned $host"
+    filename="$(echo $host | sed "s/https:\/\///g" | sed "s/http:\/\///g")"
+    echo "scanned $host"
+    # output_command > $filename
 done < $1
 ```
