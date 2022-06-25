@@ -1,5 +1,5 @@
 # bash-tools
-quick bash tools
+quick bash tools for pentest work
 
 ### Loop file lines
 ```
