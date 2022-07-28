@@ -3,7 +3,7 @@ quick bash tools for pentest work
 
 ## Loop file lines (one-liner)
 ```
-while read host; do echo "Scanning $host..." && ./scanner.py $host --threads 50 --timeout 5 | tee output/$host; done<hostsfile.txt
+while read host; do echo "Scanning $host..." && COOL_TOOL $host; done<hostsfile.txt
 ```
 
 ## Loop file lines
