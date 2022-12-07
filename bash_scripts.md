@@ -1,4 +1,4 @@
-# bash-tools
+# quick bash scripts
 quick bash tools for pentest work
 
 ## Loop file lines (one-liner)
