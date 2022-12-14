@@ -1,5 +1,13 @@
 # Physical Testing
 
+## Evasion
+- have fake get out of jail letter
+- avoid motion-activated lights that can alert to your presence
+- appearance: blend in (clothes, grooming, protective equipment, fake badge)
+- avoid people who ask questions (okay to blend in w normal ppl/work though)
+- have backup explanations/pretexts
+- appear busy/angry/authoritative to avoid contact
+
 ## Useful Devices
 - lock pick
 - drop box
