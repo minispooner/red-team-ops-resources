@@ -2,7 +2,7 @@
 
 ## Evasion
 - have fake get out of jail letter
-- avoid motion-activated lights that can alert to your presence
+- avoid motion-activated light sensors, cameras
 - appearance: blend in (clothes, grooming, protective equipment, fake badge)
 - avoid people who ask questions (okay to blend in w normal ppl/work though)
 - have backup explanations/pretexts
