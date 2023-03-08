@@ -13,3 +13,12 @@ Emulating & simulating real world threats against an organization to help them b
 - "researching and understanding industry incidents and threat landscape trends in order to stay
 on top of the latest attack techniques and tools used by adversaries is a critical part of any Red Team’s
 approach" (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
+
+## Code of Conduct
+1. Do not intentionally cause customer Service Level Agreement (SLA) impact or downtime.
+2. Do not intentionally access or modify customer data.
+3. Do not intentionally perform destructive actions.
+4. Do not weaken in-place security protections.
+5. Safeguard vulnerability and other critical information within the Red Team and only share those
+with a need-to-know.
+(Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
