@@ -28,4 +28,4 @@ with a need-to-know.
 MTTP allow Microsoft to determine a baseline from which to continuously improve upon." (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
 1. Mean Time to Compromise (MTTC)
 2. Mean Time to Privilege Escalation or “Pwnage” (MTTP)
-3. 
+3. Exploits with Impact / Exploitable Opportunities
