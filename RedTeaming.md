@@ -8,3 +8,8 @@ Emulating & simulating real world threats against an organization to help them b
 
 # The Business of Red Teaming - docs, processes, ops
 1. https://about.gitlab.com/handbook/security/threat-management/red-team/
+
+# Everyday Red Teaming
+- "researching and understanding industry incidents and threat landscape trends in order to stay
+on top of the latest attack techniques and tools used by adversaries is a critical part of any Red Team’s
+approach" (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
