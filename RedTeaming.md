@@ -22,3 +22,10 @@ approach" (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
 5. Safeguard vulnerability and other critical information within the Red Team and only share those
 with a need-to-know.
 (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
+
+## Interesting Metrics for Red Teaming
+"The role of Microsoft Red Teams are to identify gaps in the target’s security controls. Tracking MTTC and
+MTTP allow Microsoft to determine a baseline from which to continuously improve upon." (Microsoft_Enterprise_Cloud_Red_Teaming.pdf)
+1. Mean Time to Compromise (MTTC)
+2. Mean Time to Privilege Escalation or “Pwnage” (MTTP)
+3. 
