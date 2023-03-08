@@ -1,5 +1,5 @@
 # What is Red Teaming?
-Emulating & simulating real world threats against an organization to help them better prepare against the real thing.
+Emulating & simulating real world threats against an organization to help them better prepare against actual breaches.
 
 # Benefits of Red Teaming
 - Measures actual defenses. Invalidates assumptions and unveils the truth.
