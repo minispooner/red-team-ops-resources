@@ -3,7 +3,12 @@ Red Teams conduct security exercises that emulate real world threats against an 
 
 
 # Rules of Engagement
-While operating, the Red Team follows a predetermined and agreed upon Rules of Engagement.
+While operating, the Red Team follows a predetermined and agreed upon Rules of Engagement. 
+- Prior Approval
+- Deconflict Process
+- Reporting Process
+- Emergency Process
+- ...
 
 
 # Benefits of Red Teaming
