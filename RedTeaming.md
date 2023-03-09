@@ -1,5 +1,5 @@
 # What is Red Teaming?
-Red Teams conduct security exercises that emulate real world threats against an organization to help them better prepare against actual breaches. The objective is to help assess and improve the effectiveness of the people, processes, and technologies employed as an org's defenses. Emulating adversaries and thinking like attackers allows Red Teams to avoid the constraints associated with traditional security efforts across an org. 
+Red Teams conduct security exercises that emulate real world threats against an organization to help them better prepare against actual breaches. The objective is to help assess and improve the effectiveness of the people, processes, and technologies employed as an org's defenses. Thinking and acting like real attackers allows Red Teams to avoid the constraints associated with traditional security efforts across an org - this open playing field is vital to removing assumptions an org may have about its current security posture. 
 
 # Benefits of Red Teaming
 - Measures actual defenses. Invalidates assumptions and unveils the truth.
