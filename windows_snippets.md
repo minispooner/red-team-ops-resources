@@ -2,6 +2,6 @@
 
 Run `dir` recursively:\
 ```
-gci recurse .
+gci -recurse .
 ```
 
