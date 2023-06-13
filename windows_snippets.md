@@ -11,3 +11,6 @@ sc qc SERVICENAME # Check if BINARY_PATH_NAME calls an unquoted service path and
 ./accesschk /accepteula -uwdq "C:\DIR\FROM\ABOVE" # check write perms of a subdir of BINARY_PATH_NAME so we can commandeer the service call w our own executable
 net start SERVICENAME # start the service after dropping our executable into the path
 ```
+
+Kernel Priv Esc:
+- save `systeminfo` output and run through the (Windows Exploit Suggester)[https://github.com/AonCyberLabs/Windows-Exploit-Suggester]
