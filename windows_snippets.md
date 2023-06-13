@@ -13,4 +13,4 @@ net start SERVICENAME # start the service after dropping our executable into the
 ```
 
 Kernel Priv Esc:
-- save `systeminfo` output and run through the (Windows Exploit Suggester)[https://github.com/AonCyberLabs/Windows-Exploit-Suggester]
+- save `systeminfo` output and run through the [Windows Exploit Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
