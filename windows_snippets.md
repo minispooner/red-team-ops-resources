@@ -1,5 +1,10 @@
 # Windows Snippets
 
+wget for Windows:
+```
+certutil.exe -urlcache -f http://SERVER/FILE.exe OUTFILE.exe
+```
+
 Run `dir` recursively:
 ```
 gci -recurse .
