@@ -24,3 +24,7 @@ net start SERVICENAME # start the service after dropping our executable into the
 
 Kernel Priv Esc:
 - save `systeminfo` output and run through the [Windows Exploit Suggester_new](https://github.com/bitsadmin/wesng)
+
+
+## Tips
+1. https://github.com/ankh2054/windows-pentest
