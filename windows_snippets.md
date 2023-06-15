@@ -15,7 +15,7 @@ Run `dir` recursively:
 gci -recurse .
 ```
 # Exploiting Windows Services
-Listing services for weak perms and unquoted service paths
+Listing services for weak perms and unquoted service paths ([link](https://www.hackingarticles.in/windows-privilege-escalation-weak-services-permission/))
 ```
 wmic service get name,startname,pathname
 ```
