@@ -29,6 +29,10 @@ Subnet ping scan (about 5 seconds per host)
 ```
 1..20 | % {"10.10.123.$($_): $(Test-Connection -count 1 -comp 10.10.123.$($_) -quiet)"}
 ```
+Port scan single host (other port scans)[https://medium.com/@nallamuthu/powershell-port-scan-bf27fc754585]
+```
+1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect(“192.168.1.1”,$_)) “Port $_ is open!”} 2>$null
+```
 
 # Exploiting Windows Services
 Listing services for weak perms and unquoted service paths ([link](https://www.hackingarticles.in/windows-privilege-escalation-weak-services-permission/))
