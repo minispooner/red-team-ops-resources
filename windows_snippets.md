@@ -24,6 +24,12 @@ Get open/connected ports
 netstat -aon
 ```
 
+# Scans
+Subnet ping scan (about 5 seconds per host)
+```
+1..20 | % {"10.10.123.$($_): $(Test-Connection -count 1 -comp 10.10.123.$($_) -quiet)"}
+```
+
 # Exploiting Windows Services
 Listing services for weak perms and unquoted service paths ([link](https://www.hackingarticles.in/windows-privilege-escalation-weak-services-permission/))
 ```
