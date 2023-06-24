@@ -31,7 +31,7 @@ Subnet ping scan (about 5 seconds per host)
 ```
 Port scan single host ([other port scans](https://medium.com/@nallamuthu/powershell-port-scan-bf27fc754585))
 ```
-1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect(“192.168.1.1”,$_)) “Port $_ is open!”} 2>$null
+1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect("10.10.123.110",$_)) "Port $_ is open!"} 2>$null
 ```
 
 # Exploiting Windows Services
