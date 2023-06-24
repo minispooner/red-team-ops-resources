@@ -1,4 +1,4 @@
-# Windows Snippets
+  # Windows Snippets
 
 wget for Windows:
 ```
@@ -18,6 +18,12 @@ Run `dir` recursively:
 ```
 gci -recurse .
 ```
+
+Get open/connected ports
+```
+netstat -aon
+```
+
 # Exploiting Windows Services
 Listing services for weak perms and unquoted service paths ([link](https://www.hackingarticles.in/windows-privilege-escalation-weak-services-permission/))
 ```
