@@ -53,6 +53,30 @@ Kernel Priv Esc:
 - save `systeminfo` output and run through the [Windows Exploit Suggester_new](https://github.com/bitsadmin/wesng)
 
 
+# DLL Injections
+__hello.c__
+```
+#include <windows.h>
+#include <stdio.h>
+
+int main( void )
+{
+	HINSTANCE hDll;
+
+	// Load a DLL
+	hDll = LoadLibrary(TEXT("yoyo.dll"));
+
+	// If DLL Was Loaded
+	if (hDll != NULL){
+		printf("DLL Found\n");
+	} else {
+		printf("DLL NOT FOUND!\n");
+	}
+
+	return 0;
+}
+```
+
 ## Tips
 1. https://github.com/ankh2054/windows-pentest
 
