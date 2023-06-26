@@ -82,7 +82,7 @@ __dll.c__
 #include <windows.h>
 
 BOOL WINAPI
-DllMain (HANDLE hDll, DWORD, dwReason, LPVOID lpReserved)
+DllMain (HANDLE hDll, DWORD dwReason, LPVOID lpReserved)
 {
 	switch (dwReason)
 	{
