@@ -56,7 +56,7 @@ Kernel Priv Esc:
 # DLL Injections
 - x86_64-w64-mingw32-gcc-win32
 
-__hello.c__
+__hello_program.c__
 ```
 #include <windows.h>
 #include <stdio.h>
@@ -79,7 +79,7 @@ int main( void )
 }
 ```
 
-__dll.c__
+__dll_template.c__
 ```
 #include <windows.h>
 
