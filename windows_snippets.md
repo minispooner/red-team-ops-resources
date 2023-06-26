@@ -77,6 +77,28 @@ int main( void )
 }
 ```
 
+__dll.c__
+```
+#include <windows.h>
+
+BOOL WINAPI
+DllMain (HANDLE hDll, DWORD, dwReason, LPVOID lpReserved)
+{
+	switch (dwReason)
+	{
+		case DLL_PROCESS_ATTACH:
+			MessageBox(
+				Null, // Owner
+				"Some Message Text",
+				"The Title",
+				MB_ICONERROR | MB_OK // TYPE
+			);
+		break;
+	}
+	return TRUE;
+}
+```
+
 ## Tips
 1. https://github.com/ankh2054/windows-pentest
 
