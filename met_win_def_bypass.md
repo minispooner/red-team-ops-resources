@@ -136,4 +136,6 @@ ciphertext, key = AESencrypt(content, KEY)
 printResult(KEY,ciphertext)
 ```
 
-Reference: https://www.youtube.com/watch?v=gFtyz7hTzBs
+## References
+- https://www.youtube.com/watch?v=gFtyz7hTzBs
+- https://github.com/TheD1rkMtr/Shellcode-Hide
