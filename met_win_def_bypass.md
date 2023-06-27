@@ -1,6 +1,7 @@
 # Met Win Def Bypass
 
 ## Payload
+gotem.cpp
 ```
 #include <windows.h>
 #include <stdio.h>
@@ -102,6 +103,7 @@ __declspec(dllexport) BOOL WINAPI HelloWorld(void) {
 
 ## AES Encryptor Tool
 - pip install pycryptodome
+aes_crypt.py
 ```
 import sys
 from Crypto.Cipher import AES
