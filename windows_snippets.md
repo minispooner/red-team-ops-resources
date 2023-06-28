@@ -108,6 +108,7 @@ robocopy .\ \\REMOTEIP\C$\Windows\Tasks\
 
 ## Tips
 1. https://github.com/ankh2054/windows-pentest
+2. https://wadcoms.github.io/
 
 __Dirs writable by default by normal users:__
 ```
