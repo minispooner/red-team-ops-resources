@@ -101,6 +101,11 @@ DllMain (HANDLE hDll, DWORD dwReason, LPVOID lpReserved)
 }
 ```
 
+# File Moving
+```
+robocopy .\ \\REMOTEIP\C$\Windows\Tasks\
+```
+
 ## Tips
 1. https://github.com/ankh2054/windows-pentest
 
