@@ -138,6 +138,13 @@ ciphertext, key = AESencrypt(content, KEY)
 printResult(KEY,ciphertext)
 ```
 
+# Compiling and Executing
+```
+x86_64-w64-mingw32-g++ -shared -o bind.dll bind.cpp -fpermissive
+...
+
+```
+
 ## References
 - https://www.youtube.com/watch?v=gFtyz7hTzBs
 - https://github.com/TheD1rkMtr/Shellcode-Hide
