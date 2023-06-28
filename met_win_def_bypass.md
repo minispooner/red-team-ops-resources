@@ -142,7 +142,7 @@ printResult(KEY,ciphertext)
 ```
 x86_64-w64-mingw32-g++ -shared -o bind.dll bind.cpp -fpermissive
 ...
-
+rundll32.exe bind.dll, HelloWorld
 ```
 
 ## References
