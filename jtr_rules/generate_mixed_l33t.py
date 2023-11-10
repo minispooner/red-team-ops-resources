@@ -36,7 +36,7 @@ import itertools
 CHARS = {
     "a": "4",
     "s": "$",
-    # "e": "3",
+    "e": "3",
     # "t": "7",
     # "i": "1",
     # ...Optionally add more translations...
