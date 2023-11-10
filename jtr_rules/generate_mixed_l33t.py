@@ -14,6 +14,7 @@
 # 1. Configure the L33t Translation Table to your liking
 # 2. Run the script to generate your mixed l33t ruleset `python3 generate_mixed_l33t.py`
 # 3. Copy paste the output ruleset into your john.conf file
+# 4. Try it out: `john -w:words.txt -rule:mixed_l33t --stdout | sort | uniq`
 #
 # Example output:
 # [List.Rules:mixed_l33t]
@@ -28,8 +29,6 @@
 # %3e op[e3] %2e op[e3] /e op[e3]
 #
 
-import random
-import copy
 import itertools
 
 # L33t Translation Table
@@ -39,7 +38,7 @@ CHARS = {
     "s": "$",
     "e": "3",
     "t": "7",
-    "s": "5",
+    "i": "1",
     # ...Optional: add more translations...
 }
 
