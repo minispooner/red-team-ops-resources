@@ -29,8 +29,8 @@
 #
 
 import random
-import re
 import copy
+import itertools
 
 # L33t Translation Table
 # Which chars to you want to translate into l33t?
@@ -38,8 +38,15 @@ CHARS = {
     "a": "4",
     "s": "$",
     "e": "3",
+    "t": "7",
+    "s": "5",
     # ...Optional: add more translations...
 }
+
+# Advanced Setup: How many different chars would you like replaced in the word?
+# example: testadmin => [t3st4dm1n, test4dm1n, 7es74dm1n, ...] would be 3, because i only want 3 or less diff chars changed during any given permutation
+# This is useful when you don't want to generate so many output permutations, but still want many diff chars permutated
+TOTAL_DIFF_LETTERS = len(CHARS.keys())
 
 # Rule name
 RULENAME = "[List.Rules:mixed_l33t]"
@@ -65,77 +72,55 @@ for initial_char in CHARS.keys():
             old=initial_char, new=CHARS[initial_char]["replacement"]
         )
 
-# Print ruleset for insertion into john.conf
-print(RULENAME)
-
 # Simple rules output - one rule at a time
+all_options = []
 for initial_char in CHARS.keys():
     for key in RULES_TEMPLATES.keys():
-        print(CHARS[initial_char][key])
-
-# Complex mix of all rules - attempts to cover every potential combination or mixture of letters
-all_options = set()
-for initial_char in CHARS.keys():
-    for key in RULES_TEMPLATES.keys():
-        all_options.add(CHARS[initial_char][key])
-
-print(all_options)
-print("...")
-print("...")
-print("...")
+        rule = CHARS[initial_char][key]
+        all_options.append(rule)
+        # print(rule)
 
 
-def extract_l33t_chars(str):
+def strip_dup_char_rules(rules_input):
+    """Ensure a line of rules doesn't have multiple rules for a single character."""
+    chars_list = []
     results = []
-    if str:
-        findings = re.findall("/.", str)
-        for f in findings:
-            results.append(f.replace("/", ""))
+    for rule in rules_input:
+        # Get the char that will be altered
+        char = rule[-3]
+        if char not in chars_list:
+            chars_list.append(char)
+            results.append(rule)
     return results
 
 
-def is_not_duplicate_char(original_value, potential_appendage, addition):
-    # Only if addition isn't of same initial char
-    # potential appendage is what we may append this this
-    # addition is the running additions we have so far, ready to be appended to original value
-    option_being_changed_included_chars = extract_l33t_chars(original_value)
-    new_option_l33t_char = extract_l33t_chars(potential_appendage)[0]
-    chars_in_addition = extract_l33t_chars(addition)
-    if all(
-        [
-            # new_option_l33t_char not in option_being_changed_included_chars,
-            # chars_in_addition not in option_being_changed_included_chars,
-            # chars_in_addition not in new_option_l33t_char,
-            new_option_l33t_char
-            not in chars_in_addition,
-        ]
-    ):
-        return True
-    return False
+# Generate every possible combination of rules, 1-rules-long
+results = []
+for i in range(1, TOTAL_DIFF_LETTERS):
+    combos = list(itertools.combinations(all_options, i))
+    for combo in combos:
+        rule_list = strip_dup_char_rules(combo)
+        results.append(rule_list)
 
+# Remove rules that do the same thing
+# Example: /a op[a4] /s op[s$] and /s op[s$] /a op[a4]
+filtered_rules = []
+for rule_list in results:
+    for test_against in results:
+        if len([i for i in test_against if i in rule_list]) == len(rule_list):
+            break
+    filtered_rules.append(rule_list)
 
-TOTAL_GENERATION_LOOPS = 1000
-base_options = copy.deepcopy(all_options)
-for i in range(0, TOTAL_GENERATION_LOOPS):
-    original_value = random.sample(base_options, 1)[0]
-    addition = original_value
+# Convert rules from python list to rules line
+lines_results = []
+for rule_list in filtered_rules:
+    rule_line = " ".join(rule_list)
+    lines_results.append(rule_line)
 
-    for k in CHARS.keys():
-        # Insert randomness to additions
-        if random.choice([True, False]):
-            potential_appendage = random.sample(base_options, 1)[0]
-            if is_not_duplicate_char(original_value, potential_appendage, addition):
-                addition += " {}".format(potential_appendage)
+# Remove duplicate entries
+uniq_res = set(lines_results)
 
-    all_options.add(addition)
-
-
-# PRINTER
-
-for option in all_options:
-    print(option)
-
-# for option in all_options:
-#     a = extract_l33t_chars(option)
-#     print(a)
-#     # print(option)
+# Print rulesets for insertion into john.conf
+print(RULENAME)
+for rule_line in uniq_res:
+    print(rule_line)
