@@ -4,8 +4,8 @@
 # This tool generates a list of John the Ripper permutation rules for mixed l33t translations.
 #
 # Details
-# I had the need for a mixed l33t rule, as oppsed to "replace all X letters with Y letter" l33t, and I wasn't finding
-# solutions from public searches, so I built my own mixed l33t rule. Given there are many variations
+# I had the need for a mixed l33t rule (3xample), as oppsed to the common replace-all l33t rule (3xampl3) that I often come across.
+# Googling wasn't giving me good results, so I built my own mixed l33t rule. Since there are many variations
 # of l33t translations (s = 5 or $, T = 7, etc), I made the tool configurable, so you can simply enter in which
 # characters you want translated and to what. A basic, default L33t Translation Table is already in place, but
 # you can add other transltions to your heart's desire.
