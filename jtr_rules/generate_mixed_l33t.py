@@ -36,10 +36,10 @@ import itertools
 CHARS = {
     "a": "4",
     "s": "$",
-    "e": "3",
-    "t": "7",
-    "i": "1",
-    # ...Optional: add more translations...
+    # "e": "3",
+    # "t": "7",
+    # "i": "1",
+    # ...Optionally add more translations...
 }
 
 # Advanced Setup: How many different chars would you like replaced in the word?
