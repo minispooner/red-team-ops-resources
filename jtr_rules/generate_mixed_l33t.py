@@ -46,7 +46,7 @@ CHARS = {
 # Advanced Setup: How many different chars would you like replaced in the word?
 # example: testadmin => [t3st4dm1n, test4dm1n, 7es74dm1n, ...] would be 3, because i only want 3 or less diff chars changed during any given permutation
 # This is useful when you don't want to generate so many output permutations, but still want many diff chars permutated
-TOTAL_DIFF_LETTERS = len(CHARS.keys())
+TOTAL_DIFF_LETTERS = len(CHARS.items())
 
 # Rule name
 RULENAME = "[List.Rules:mixed_l33t]"
@@ -96,18 +96,22 @@ def strip_dup_char_rules(rules_input):
 
 # Generate every possible combination of rules, 1-rules-long
 results = []
-for i in range(1, TOTAL_DIFF_LETTERS):
-    combos = list(itertools.combinations(all_options, i))
+for i in range(0, TOTAL_DIFF_LETTERS):
+    combos = list(itertools.combinations(all_options, i + 1))
     for combo in combos:
         rule_list = strip_dup_char_rules(combo)
         results.append(rule_list)
 
 # Remove rules that do the same thing
 # Example: /a op[a4] /s op[s$] and /s op[s$] /a op[a4]
+# TODO: Not sure if this is having any affect
 filtered_rules = []
 for rule_list in results:
     for test_against in results:
         if len([i for i in test_against if i in rule_list]) == len(rule_list):
+            # if test_against != rule_list:
+            #     print("Here is a duplicate rule: {rule_list} and {test_against} ")
+            #     exit()
             break
     filtered_rules.append(rule_list)
 
