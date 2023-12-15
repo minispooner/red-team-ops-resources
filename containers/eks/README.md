@@ -1,7 +1,7 @@
 # Elastic Kubernetes Services (EKS)
 
 ## EKS Cluster Hacking Game
-<details open>
+<details closed>
 <summary>Summary (spoilers!)</summary>
 <br>
   1. test
