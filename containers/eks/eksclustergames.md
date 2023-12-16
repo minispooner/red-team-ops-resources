@@ -36,7 +36,7 @@ __Challenge 5 objective: Escalate from EKS to AWS s3access-sa account__
 <details closed>
 <summary>Challenge 5 (spoilers!)</summary>
 <br>
-  TODO
+  generate eks token for debug-sa user and pass specific audience, assume role w web cred to get aws keys, copy flag down from s3 bucket
 </details>
 
 ## References
